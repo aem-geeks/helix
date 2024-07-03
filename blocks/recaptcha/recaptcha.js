@@ -1,10 +1,10 @@
-import { getConfigValue } from './scripts/configs.js';
+import { getConfigValue } from './configs.js';
 
 export default function decorate(block) {
   const envid= getConfigValue('env');
   const sitekey= getConfigValue('site_key');
   const sitesecret= getConfigValue('site_secret');
-  console.log("---Recaptcha----> {} | {} | {} ",envid,sitekey,sitesecret);
+  console.log("---ReCaptcha----> {} | {} | {} ",envid,sitekey,sitesecret);
 
 }
 
