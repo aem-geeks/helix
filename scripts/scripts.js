@@ -13,6 +13,8 @@ import {
   loadCSS,
 } from './aem.js';
 
+import { getConfigValue } from './configs.js';
+
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
 /**
@@ -35,6 +37,8 @@ function buildHeroBlock(main) {
  */
 async function loadFonts() {
   await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
+  const envid=await getConfigValue('commerce-environment-id');
+  console.log("------->",envid);
   try {
     if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
   } catch (e) {
