@@ -2,7 +2,7 @@ import { getConfigValue } from '../../scripts/configs.js';
 
 export default async function decorate(block) {
   getgScript();
-  const site_key=getConfigs('site_key')
+  const site_key=await getConfigs('site_key')
   const captchadiv = document.createElement('div');
   const indiv=document.createElement('div')
   indiv.setAttribute('class','g-recaptcha');
