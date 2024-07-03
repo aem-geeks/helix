@@ -37,7 +37,7 @@ function buildHeroBlock(main) {
  */
 async function loadFonts() {
   await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
-  const envid=await getConfigValue('commerce-environment-id');
+  const envid=await getConfigValue('env');
   console.log("------->",envid);
   try {
     if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
