@@ -1,4 +1,4 @@
-import { getConfigValue } from '.scripts/configs.js';
+import { getConfigValue } from './scripts/configs.js';
 
 export default function decorate(block) {
   const envid= getConfigValue('env');
