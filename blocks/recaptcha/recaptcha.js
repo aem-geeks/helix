@@ -1,7 +1,7 @@
 import { getConfigValue } from '../../scripts/configs.js';
 
 export default async function decorate(block) {
-  getgScript();
+  setgScript();
   const site_key=await getConfigs('site_key')
   const data_size=await getConfigs('data-size')
   const data_theme=await getConfigs('data-theme')
@@ -15,14 +15,12 @@ export default async function decorate(block) {
 
 
 async function getConfigs(key) {
-  const envid=await getConfigValue('env');
-  const sitekey=await getConfigValue(key);
-  const sitesecret=await getConfigValue('site_secret');
-  console.log("---ReCaptcha----> {} | {} | {} ",envid,sitekey,sitesecret);
-  return sitekey;
+  const value=await getConfigValue(key);
+  console.log("---Key--->",key," ---Value---> ",value);
+  return value;
 }
 
-async function getgScript(){
+async function setgScript(){
   const gscript = document.createElement('script');
   gscript.setAttribute('src','https://www.google.com/recaptcha/api.js');
   gscript.setAttribute('async','');
