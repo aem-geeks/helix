@@ -6,7 +6,7 @@ export default async function decorate(block) {
   const captchadiv = document.createElement('div');
   const indiv=document.createElement('div')
   indiv.setAttribute('class','g-recaptcha');
-  indiv.setAttribute('data-sitekey','6LffTL4hAAAAAMeqRXeWCEJs21SnNUVLZqsuDA4w');
+  indiv.setAttribute('data-sitekey','6Lc2fLEbAAAAADmlICdDP4r8obxMsMmOd1j6teuT');
   block.appendChild(indiv);
 }
 
