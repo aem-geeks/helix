@@ -1,16 +1,17 @@
 import { getConfigValue } from '../../scripts/configs.js';
 
-export default function decorate(block) {
+export default async function decorate(block) {
   getgScript();
   getConfigs()
   const captchadiv = document.createElement('div');
-  captchadiv.setAttribute('class','g-recaptcha');
-  captchadiv.setAttribute('data-sitekey','6LffTL4hAAAAAMeqRXeWCEJs21SnNUVLZqsuDA4w');
+  const indiv=document.createElement('div')
+  indiv.setAttribute('class','g-recaptcha');
+  indiv.setAttribute('data-sitekey','6LffTL4hAAAAAMeqRXeWCEJs21SnNUVLZqsuDA4w');
+  block.appendChild(indiv);
 }
 
 
 async function getConfigs() {
-
   const envid=await getConfigValue('env');
   const sitekey=await getConfigValue('site_key');
   const sitesecret=await getConfigValue('site_secret');
