@@ -4,6 +4,9 @@
     {
       "id": "contact-us-palette",
       "title": "Contact US Palette",
+      "environments": [
+        "edit"
+        ],
       "url": "/tools/contactus/contactus.html",
       "isPalette": true,
       "passConfig": true,
@@ -13,6 +16,9 @@
     {
       "id": "contact-us-page",
       "title": "Contact US Page",
+      "environments": [
+        "edit"
+        ],
       "url": "/tools/contactus/contactus.html",
       "passConfig": true,
       "passReferrer": true
