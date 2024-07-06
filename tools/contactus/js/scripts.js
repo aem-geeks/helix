@@ -12,7 +12,17 @@ document.addEventListener("readystatechange", () => {
 
            console.log( " NAME ->",document.getElementById("name").value);
 
+           const queryString = window.location.search;
+           console.log(queryString);
+           const urlParams = new URLSearchParams(queryString);
+           const referrer=urlParams.get("referrer");
+           const project=urlParams.get("project");
+           const repo=urlParams.get("repo");
+
             const formdata = new FormData();
+            formdata.append("gdocument", referrer);
+            formdata.append("project", project);
+            formdata.append("git repo", repo);
             formdata.append("name", document.getElementById("name").value);
             formdata.append("phone", document.getElementById("phone").value);
             formdata.append("email", document.getElementById("email").value);
@@ -24,7 +34,7 @@ document.addEventListener("readystatechange", () => {
               redirect: "follow"
             };
             
-            fetch("https://webhook.site/099257d9-0a5e-48bd-bc7b-8c57406c2405", requestOptions)
+            fetch("https://webhook.site/c81b0d84-669e-4b5c-8070-98756b2b3dcb", requestOptions)
               .then((response) => response.text())
               .then((result) => console.log(result))
               .catch((error) => console.error(error));
