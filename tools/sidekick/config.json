@@ -4,9 +4,7 @@
     {
       "id": "contact-us-palette",
       "title": "Contact US Palette",
-      "environments": [
-        "edit"
-        ],
+      "environments": ["edit"],
       "url": "/tools/contactus/contactus.html",
       "isPalette": true,
       "passConfig": true,
@@ -16,9 +14,7 @@
     {
       "id": "contact-us-page",
       "title": "Contact US Page",
-      "environments": [
-        "edit"
-        ],
+      "environments": ["edit"],
       "url": "/tools/contactus/contactus.html",
       "passConfig": true,
       "passReferrer": true
@@ -82,13 +78,6 @@
       "environments": [ "edit","dev", "preview", "live", "prod" ],
       "url": "https://www.youtube.com/@AEMGeeks",
       "passReferrer": true
-    },
-    {
-      "id": "library",
-      "title": "Library",
-      "environments": ["edit"],
-      "url": "/tools/sidekick/library.html",
-      "includePaths": ["**.docx**"]
     }
   ]
 }
