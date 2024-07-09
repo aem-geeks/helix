@@ -44,9 +44,9 @@ indices:
           parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
 
 en:
-  site:
+  site: english
     include:
-      - 'en/**'
+      - '/en/**'
     exclude:
       - '**/cms/**'  
     target: /en/en-query-index  
@@ -81,10 +81,10 @@ en:
         value: |
           parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT') 
 
-fr:
+fr: france
   site:
     include:
-      - 'fr/**'
+      - '/fr/**'
     exclude:
       - '**/cms/**'  
     target: /fr/fr-query-index  
