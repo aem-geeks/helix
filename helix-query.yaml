@@ -6,7 +6,7 @@ indices:
     include:
       - '**'
     exclude:
-      - '**/cms/'  
+      - '**/cms/**'  
     target: /query-index  
     # target: SharePoint URL of your query index, e.g. <shared-folder-url>/query-index.xlsx
     properties:
