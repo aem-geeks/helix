@@ -47,8 +47,6 @@ en:
   site: english
     include:
       - '/en/**'
-    exclude:
-      - '**/cms/**'  
     target: /en/query-index  
     # target: SharePoint URL of your query index, e.g. <shared-folder-url>/query-index.xlsx
     properties:
@@ -85,8 +83,6 @@ fr: france
   site:
     include:
       - '/fr/**'
-    exclude:
-      - '**/cms/**'  
     target: /fr/query-index  
     # target: SharePoint URL of your query index, e.g. <shared-folder-url>/query-index.xlsx
     properties:
