@@ -49,7 +49,7 @@ en:
       - '/en/**'
     exclude:
       - '**/cms/**'  
-    target: /en/en-query-index  
+    target: /en/query-index  
     # target: SharePoint URL of your query index, e.g. <shared-folder-url>/query-index.xlsx
     properties:
       author:
@@ -87,7 +87,7 @@ fr: france
       - '/fr/**'
     exclude:
       - '**/cms/**'  
-    target: /fr/fr-query-index  
+    target: /fr/query-index  
     # target: SharePoint URL of your query index, e.g. <shared-folder-url>/query-index.xlsx
     properties:
       author:
