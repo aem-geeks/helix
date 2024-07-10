@@ -44,4 +44,9 @@ indices:
     <<: *default
     include:
       - /en/**
-    target: /en/query-index          
+    target: /en/query-index
+  fr:
+    <<: *default
+    include:
+      - /fr/**
+    target: /fr/query-index            
