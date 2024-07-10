@@ -45,6 +45,11 @@ indices:
     include:
       - /en/**
     target: /en/query-index
+    properties:
+      demo:
+        select: head > meta[name="title"]
+        value: |
+          attribute(el, 'content')
   fr:
     <<: *default
     include:
