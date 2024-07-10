@@ -41,7 +41,7 @@ indices:
         value: |
           parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
   en:
-    <<: *default
+    site: en
     include:
       - /en/**
     target: /en/query-index
