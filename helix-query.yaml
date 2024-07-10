@@ -78,8 +78,8 @@ indices:
         select: none
         value: |
           parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
-      demo:
-        select: head > meta[name="og:title"]
+      cat:
+        select: head > meta[name="topics"]
         value: |
           attribute(el, 'content')
   fr:
