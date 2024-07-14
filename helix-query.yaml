@@ -1,6 +1,6 @@
 version: 1
 indices:
-  site: eds
+  site:
     include:
       - '**'
     target: /query-index  
