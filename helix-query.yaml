@@ -42,7 +42,7 @@ indices:
         value: |
           headers['blocks']
       pagetitle:
-        selectFirst: main > h1
+        selectFirst: h1
         value: |
           textContent(el)               
   
