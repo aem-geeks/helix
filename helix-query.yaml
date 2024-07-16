@@ -40,5 +40,9 @@ indices:
       blocks:
         select: none
         value: |
-          headers['blocks']         
+          headers['blocks']
+      pagetitle:
+        selectFirst: main > h1
+        value: |
+          textContent(el)               
   
