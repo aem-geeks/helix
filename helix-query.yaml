@@ -9,10 +9,6 @@ indices:
       - '/home-page'
     target: /query-index  
     properties:
-      author:
-        select: head > meta[name="author"]
-        value: |
-          attribute(el, 'content')
       title:
         select: head > meta[property="og:title"]
         value: |
@@ -43,10 +39,6 @@ indices:
       - '/ca/**'
     target: /ca/query-index
     properties:
-      author:
-        select: head > meta[name="author"]
-        value: |
-          attribute(el, 'content')
       title:
         select: head > meta[property="og:title"]
         value: |
@@ -71,20 +63,16 @@ indices:
         select: none
         value: |
           parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')  
-      blocks:
+      author:
         select: none
         value: |
-          headers['blocks']           
+          headers['author']           
   india:
     site: in
     include:
       - '/in/**'
     target: /in/query-index  
     properties:
-      author:
-        select: head > meta[name="author"]
-        value: |
-          attribute(el, 'content')
       title:
         select: head > meta[property="og:title"]
         value: |
