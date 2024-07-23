@@ -70,7 +70,11 @@ indices:
       lastModified:
         select: none
         value: |
-          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')   
+          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')  
+      blocks:
+        select: none
+        value: |
+          headers['blocks']           
   india:
     site: in
     include:
@@ -104,4 +108,8 @@ indices:
       lastModified:
         select: none
         value: |
-          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')                
+          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT') 
+      pagetitle:
+        selectFirst: h1
+        value: |
+          textContent(el)                         
