@@ -1,6 +1,6 @@
 version: 1
 indices:
-  global:
+  global: &default
     include:
       - '/blocks/**'
       - '/blogs/**'
@@ -8,8 +8,8 @@ indices:
       - '/home'
       - '/home-page'
     target: /query-index  
-    properties:
-      title:
+    properties: &prop
+      title: 
         select: head > meta[property="og:title"]
         value: |
           attribute(el, 'content')
@@ -34,70 +34,12 @@ indices:
         value: |
           parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')   
   canada:
-    site: ca
+    <<: *default
     include:
       - '/ca/**'
-    target: /ca/query-index
-    properties:
-      title:
-        select: head > meta[property="og:title"]
-        value: |
-          attribute(el, 'content')
-      date:
-        select: head > meta[name="publication-date"]
-        value: |
-          dateValue(attribute(el, 'content'), 'MM-DD-YYYY')
-      image:
-        select: head > meta[property="og:image"]
-        value: |
-          match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
-      description:
-        select: head > meta[name="description"]
-        value: |
-          attribute(el, 'content')
-      category:
-        select: head > meta[name="category"]
-        value: |
-          attribute(el, 'content')
-      lastModified:
-        select: none
-        value: |
-          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')  
-      author:
-        select: none
-        value: |
-          headers['author']           
+    target: /ca/query-index        
   india:
-    site: in
+    <<: *default
     include:
       - '/in/**'
     target: /in/query-index  
-    properties:
-      title:
-        select: head > meta[property="og:title"]
-        value: |
-          attribute(el, 'content')
-      date:
-        select: head > meta[name="publication-date"]
-        value: |
-          dateValue(attribute(el, 'content'), 'MM-DD-YYYY')
-      image:
-        select: head > meta[property="og:image"]
-        value: |
-          match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
-      description:
-        select: head > meta[name="description"]
-        value: |
-          attribute(el, 'content')
-      category:
-        select: head > meta[name="category"]
-        value: |
-          attribute(el, 'content')
-      lastModified:
-        select: none
-        value: |
-          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT') 
-      pagetitle:
-        selectFirst: h1
-        value: |
-          textContent(el)                         
